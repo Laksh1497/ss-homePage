@@ -7,6 +7,11 @@ module.exports = (webpackConfigEnv, argv) => {
     projectName: "homePage",
     webpackConfigEnv,
     argv,
+    
+  });
+
+  return merge(defaultConfig, {
+    // modify the webpack config however you'd like to by adding to this object
     devServer: {
       headers: {
         "Access-Control-Allow-Origin": "https://main.dvbrscsqctta0.amplifyapp.com",
@@ -14,10 +19,5 @@ module.exports = (webpackConfigEnv, argv) => {
         "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
       }
     }
-  });
-
-  return merge(defaultConfig, {
-    // modify the webpack config however you'd like to by adding to this object
-    
   });
 };
