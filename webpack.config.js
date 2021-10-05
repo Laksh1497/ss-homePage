@@ -6,17 +6,18 @@ module.exports = (webpackConfigEnv, argv) => {
     orgName: "darthlaksh97",
     projectName: "homePage",
     webpackConfigEnv,
-    argv
-  });
-
-  return merge(defaultConfig, {
-    // modify the webpack config however you'd like to by adding to this object
+    argv,
     devServer: {
       headers: {
-        "Access-Control-Allow-Origin": "https://main.d2rnselr68b9dq.amplifyapp.com",
+        "Access-Control-Allow-Origin": "https://main.dvbrscsqctta0.amplifyapp.com",
         "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
         "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
       }
     }
+  });
+
+  return merge(defaultConfig, {
+    // modify the webpack config however you'd like to by adding to this object
+    
   });
 };
